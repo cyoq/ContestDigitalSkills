@@ -1,0 +1,218 @@
+/* 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #f1f1f1;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.header {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    padding: 30px;
+    background: gray; /* #1abc9c; */ /*
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+.header p {
+    font-size: 25px;
+}
+
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+.leftcolumn p {
+    font-size: 20px;
+}
+
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+
+.rightcolumn p {
+    font-size: 15px;
+}
+
+.card-hover {
+    background-color: red;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    display:none
+}
+
+.card-hover:hover .card {
+    display: block;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+.unity-game {
+    width: 960px;
+    height: 645px;
+    margin: 20px;
+    /* border: 0.2px solid black; */
+    /* -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); */ /*
+}
+
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+
+    .unity-game {
+        width: 700px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .unity-game {
+        display: none;
+    }
+}
+ */
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #f1f1f1;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.header {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    padding: 30px;
+    background: gray; /* #1abc9c; */ 
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+.header p {
+    font-size: 25px;
+}
+
+.row {
+    width: 100%;
+}
+
+.row1 .inner1 {
+    float: left;
+    width: 75%;
+}
+
+.row1 .inner2 {
+    float: right;
+    width: 25%;
+}
+
+.card-hover {
+    background-color: red;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    display:none
+}
+
+.card-hover:hover .card {
+    display: block;
+}
+
+.row2 {
+    float: left;
+}
+
+.row2 iframe {
+    align:center;
+    margin-left: auto;   /* Automatic margin from left */
+    margin-right: auto; 
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+.unity-game {
+    width: 960px;
+    height: 645px;
+    margin: 20px;
+    /* border: 0.2px solid black; */
+    /* -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); */ 
+}
+
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+
+    .unity-game {
+        width: 700px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .unity-game {
+        display: none;
+    }
+}
