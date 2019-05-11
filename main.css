@@ -1,6 +1,8 @@
+
 * {
     box-sizing: border-box;
 }
+
 
 body {
     background: #f1f1f1;
@@ -16,57 +18,106 @@ body {
     text-align: center;
     color: white;
     padding: 30px;
-    background: gray; /* #1abc9c; */ 
+    background: #B334B3; /* #1abc9c; */ 
 }
 
 .header h1 {
-    font-size: 50px;
+    font-size: 30px;
 }
 
 .header p {
-    font-size: 25px;
+    font-size: 15px;
 }
 
 .row {
     width: 100%;
-}
-
-.row1 .inner1 {
-    float: left;
-    width: 75%;
-}
-
-.row1 .inner2 {
-    float: right;
-    width: 25%;
-}
-
-.card-hover {
-    background-color: red;
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-.card {
-    background-color: white;
-    padding: 20px;
-    margin-top: 20px;
-    display:none
-}
-
-.card-hover:hover .card {
     display: block;
+}
+
+.banner {
+    position:relative;
+    width:300px;
+    height:300px;
+    float:left;
+    margin:8px; 
+    background-size:100%;
+    background-position:center;
+    transition:0.5s;
+    overflow:hidden;
+    border-radius:4px;
+    box-shadow:0 0 4px #000;
+}
+.banner:hover  {
+    background-size: 110%;
+}
+
+.banner:before { 
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    transform:translateY(90%);/*use transform:translateY(100%); to remove footer*/
+    background-color:rgba(0,0,0,0.3);
+    color:#fff;
+    padding:0 8px;
+    content:attr(data-title);
+    transition:0.5s 0.1s;
+    color:#fff;
+    font-weight:bold;
+    font-size:1.5em;
+}
+
+.banner:after {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    color:#fff;
+    padding:8px;
+    content:attr(data-text);
+    transition:0.5s;
+    padding-top:2em;
+    margin-top:8px;
+    transform:translateY(100%);
+    opacity:0;
+}
+
+.banner:hover:after {
+    transform:translateY(0);
+    transition:0.5s 0.1s;
+    opacity:1;
+}
+
+.banner:hover:before {
+    transform:translateY(0);
+    padding:8px;
+    background-color:rgba(0,0,0,0.6);
+    transition:0.5s;
+}
+
+.banner.left {
+    background:blue;
+    float:right;
+    width: 250px;
+    height: 250px;
+}
+
+.banner.right {
+    background:red;
+    float:left;
+    width: 250px;
+    height: 250px;
 }
 
 .row2 {
-    float: left;
+    display: block; 
 }
 
 .row2 iframe {
-    display: block;
     margin: auto;
-
+    display:block;
 }
 
 .row:after {
@@ -75,6 +126,47 @@ body {
     clear: both;
 }
 
+.row1:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row15 {
+    display: block;
+    width: 100%;
+}
+
+.row15:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#info {
+    font-size: 20px;
+}
+
+#info-div {
+    margin: 10px;
+    text-align: center;
+    /* width: 50p   x; */
+    background: rgb(213, 216, 12);
+}
+
+#error {
+    display: none;
+    text-align:center;
+    font-size: 20px;
+}
+
+#error-div {
+    display:none;
+    background: red;
+    height: 30px;
+}
+
+
 .footer {
     padding: 20px;
     text-align: center;
@@ -82,28 +174,48 @@ body {
     margin-top: 20px;
 }
 
-.unity-game {
+#unity-game {
     width: 960px;
-    height: 645px;
-    display: block;
-    /*  margin: 20px; */
-    /* border: 0.2px solid black; */
-    /* -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); */ 
+    height: 645px;  
 }
 
 @media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {   
-      width: 100%;
-      padding: 0;
+    body {
+        padding-left: 50px;
+        padding-right: 50px;
     }
 
-    .unity-game {
-        width: 700px;
+    .banner.left {
+        float:none;
+        margin: auto;
+        padding: 30px;
+    }
+
+    .banner.right {
+        float:none;
+        margin: auto;
+        padding: 30px;
+    }
+
+    #unity-game {
+        width: 500px;
+        height: 1000px;
     }
 }
 
-@media screen and (max-width: 500px) {
-    .unity-game {
-        display: none;
+@media screen and (max-width: 600px) {
+    body {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    #error {
+        display: block;
+    }
+    #error-div {
+        display: block;
+    }
+    .row2 iframe {
+        display:none;
     }
 }
