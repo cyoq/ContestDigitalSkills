@@ -12,14 +12,14 @@
   </head>
   <body>
     <div class="webgl-content"> 
-      <div id="gameContainer" style="width: 960px; height: 600px; background: rgb(15, 15, 15  );">
+      <div id="gameContainer" style="width: 960px; height: 600px; background: rgb(15, 15, 15);">
         <button class="btn"></button>
         <!-- <span>Noklikšķiniet, lai uzsāktu virtuālo ceļojumu.</span> -->
       </div>
       <div class="footer">
         <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-        <div class="title">Dino_2015</div>
+        <div class="fullscreen" onclick="if (gameInstance !== undefined) { gameInstance.SetFullscreen(1) }"></div>
+        <div class="title">Dinaburga koka pils iespējamais izskats</div>
       </div>
     </div>
     <script src="TemplateData/side.js"></script>

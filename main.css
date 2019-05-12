@@ -11,6 +11,7 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
 }
 
 .header {
@@ -18,7 +19,10 @@ body {
     text-align: center;
     color: white;
     padding: 30px;
+    margin-bottom: 10px;
     background: #B334B3; /* #1abc9c; */ 
+    border-radius: 10px;
+    box-shadow:0 0 4px #000;  
 }
 
 .header h1 {
@@ -26,7 +30,7 @@ body {
 }
 
 .header p {
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .banner {
@@ -38,6 +42,9 @@ body {
     background-size:100%;
     background-position:center;
     transition:0.5s;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -o-transition:0.5s;
     overflow:hidden;
     border-radius:4px;
     box-shadow:0 0 4px #000;
@@ -49,18 +56,24 @@ body {
 .banner:before { 
     position:absolute;
     top:0;
-    bottom:0;
+    bottom: 0;
     left:0;
     right:0;
-    transform:translateY(90%);/*use transform:translateY(100%); to remove footer*/
+    transform:translateY(85%);/*use transform:translateY(100%); to remove footer*/
+    -webkit-transform:translateY(85%);
+    -moz-transform:translateY(85%);
+    -o-transform:translateY(85%);
     background-color:rgba(0,0,0,0.3);
     color:#fff;
-    padding:0 8px;
+    padding: 0px 8px;
     content:attr(data-title);
     transition:0.5s 0.1s;
+    -webkit-transition:0.5s 0.1s;
+    -moz-transition:0.5s 0.1s;
+    -o-transition:0.5s 0.1s;
     color:#fff;
     font-weight:bold;
-    font-size:1.5em;
+    font-size:1em;
 }
 
 .banner:after {
@@ -73,23 +86,42 @@ body {
     padding:8px;
     content:attr(data-text);
     transition:0.5s;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -o-transition:0.5s;
     padding-top:2em;
-    margin-top:8px;
+    margin-top: 8px;
     transform:translateY(100%);
+    -webkit-transform:translateY(100%);
+    -moz-transform:translateY(100%);
+    -o-transform:translateY(100%);
     opacity:0;
 }
 
 .banner:hover:after {
     transform:translateY(0);
+    -webkit-transform:translateY(0);
+    -moz-transform:translateY(0);
+    -o-transform:translateY(0);
     transition:0.5s 0.1s;
+    -webkit-transition:0.5s 0.1s;
+    -moz-transition:0.5s 0.1s;
+    -o-transition:0.5s 0.1s;
     opacity:1;
+    font-size: 0.8em;
 }
 
 .banner:hover:before {
     transform:translateY(0);
+    -webkit-transform:translateY(0);
+    -moz-transform:translateY(0);
+    -o-transform:translateY(0);
     padding:8px;
     background-color:rgba(0,0,0,0.6);
     transition:0.5s;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -o-transition:0.5s;
 }
 
 .banner.left {
@@ -100,15 +132,24 @@ body {
 }
 
 .banner.right {
-    background:red;
+    background-image: url("content/bugs.jpg");
+    background-repeat: no-repeat;
     float:left;
     width: 250px;
-    height: 250px;
+    height: 150px;
 }
 
 .row {
     width: 100%;
     display: block;
+}
+
+.row p {
+    color: #000;
+}
+
+.row ul li {
+    color: #000;
 }
 
 .row:after, .row1:after, .row15:after, .row2:after {
@@ -117,20 +158,30 @@ body {
     clear: both;
 }
 
+
 .row2 iframe {
     margin: auto;
     display:block;
 }
 
 #info {
-    font-size: 20px;
-}
-
-#info-div {
     margin: 10px;
     height: 10%;
-    text-align: center;
-    background: #2A6609;
+    text-align: left;
+    background: #B334B3;
+    padding: 10px;  
+    border-radius: 5px;
+    box-shadow:0 0 4px #000;    
+}
+
+#info p {
+    font-size: 20px;
+    color: #f2f2f2;
+}
+
+#info ul li{
+    font-size: 20px;
+    color: #f2f2f2;        
 }
 
 #error {
@@ -148,13 +199,25 @@ body {
 #unity-game {
     width: 960px;
     height: 645px;  
+    border-radius: 8px;
+    box-shadow:0 0 4px #000;    
 }
 
 .footer {
-    padding: 20px;
+    margin: auto;
+    width: 80%;
+    padding: 5px;
     text-align: center;
-    background: #ddd;
+    background: #B334B3;
     margin-top: 20px;
+    border-radius: 5px;
+    box-shadow:0 0 4px #000;
+}
+
+.footer p {
+    line-height: 8px;
+    color: #fff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 @media screen and (max-width: 800px) {
@@ -206,5 +269,9 @@ body {
     }
     .row2 iframe {
         display:none;
+    }
+
+    .footer p {
+        line-height: 15px;
     }
 }
