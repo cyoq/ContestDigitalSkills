@@ -5,7 +5,7 @@
 
 
 body {
-    background: #f1f1f1;
+    background: url("content/floor-tile.png");
     padding-left: 150px;
     padding-right: 150px;
     padding-top: 10px;
@@ -27,11 +27,6 @@ body {
 
 .header p {
     font-size: 15px;
-}
-
-.row {
-    width: 100%;
-    display: block;
 }
 
 .banner {
@@ -111,36 +106,20 @@ body {
     height: 250px;
 }
 
-.row2 {
-    display: block; 
+.row {
+    width: 100%;
+    display: block;
+}
+
+.row:after, .row1:after, .row15:after, .row2:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .row2 iframe {
     margin: auto;
     display:block;
-}
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.row1:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.row15 {
-    display: block;
-    width: 100%;
-}
-
-.row15:after {
-    content: "";
-    display: table;
-    clear: both;
 }
 
 #info {
@@ -149,9 +128,9 @@ body {
 
 #info-div {
     margin: 10px;
+    height: 10%;
     text-align: center;
-    /* width: 50p   x; */
-    background: rgb(213, 216, 12);
+    background: #2A6609;
 }
 
 #error {
@@ -163,20 +142,19 @@ body {
 #error-div {
     display:none;
     background: red;
-    height: 30px;
+    height: 10%;
 }
 
+#unity-game {
+    width: 960px;
+    height: 645px;  
+}
 
 .footer {
     padding: 20px;
     text-align: center;
     background: #ddd;
     margin-top: 20px;
-}
-
-#unity-game {
-    width: 960px;
-    height: 645px;  
 }
 
 @media screen and (max-width: 800px) {
@@ -203,12 +181,23 @@ body {
     }
 }
 
+@media screen and (max-width: 700px) {
+    #error {
+        display: block;
+    }
+    #error-div {
+        display: block;
+    }
+    .row2 iframe {
+        display:none;
+    }
+}
+
 @media screen and (max-width: 600px) {
     body {
         padding-left: 5px;
         padding-right: 5px;
     }
-    
     #error {
         display: block;
     }
