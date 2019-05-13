@@ -261,6 +261,26 @@ h3 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+@media screen and (max-width: 1100px) {
+    .info.first  {
+        width: 100%;
+        float:none;
+    }
+    .info.second  {
+        width: 100%;
+        float:none;
+    }
+    
+    .row15 {
+        display: block;
+    }
+
+    .footer p {
+        line-height: 20px;
+    }
+
+}
+
 @media screen and (max-width: 800px) {
     body {
         padding-left: 50px;
