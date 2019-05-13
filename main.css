@@ -10,7 +10,7 @@ body {
     padding-right: 150px;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Monsterrat, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;
 }
 
@@ -31,6 +31,11 @@ body {
 
 .header p {
     font-size: 20px;
+}
+
+h3 {
+    color: #FF70FF
+
 }
 
 .banner {
@@ -72,8 +77,8 @@ body {
     -moz-transition:0.5s 0.1s;
     -o-transition:0.5s 0.1s;
     color:#fff;
-    font-weight:bold;
-    font-size:1em;
+    font-weight: bold;
+    font-size: 1em;
 }
 
 .banner:after {
@@ -96,6 +101,7 @@ body {
     -moz-transform:translateY(100%);
     -o-transform:translateY(100%);
     opacity:0;
+    font-size: 0.8em;
 }
 
 .banner:hover:after {
@@ -116,7 +122,7 @@ body {
     -webkit-transform:translateY(0);
     -moz-transform:translateY(0);
     -o-transform:translateY(0);
-    padding:8px;
+    padding: 8px;
     background-color:rgba(0,0,0,0.6);
     transition:0.5s;
     -webkit-transition:0.5s;
@@ -124,19 +130,34 @@ body {
     -o-transition:0.5s;
 }
 
-.banner.left {
-    background:blue;
+.banner.right {
+    background-image:url(content/glasses.jpg);
+    background-repeat: no-repeat;
+    background-size: 150%;
     float:right;
-    width: 250px;
-    height: 250px;
+    width: 270px;
+    height: 200px;
 }
 
-.banner.right {
+.banner.right:hover {
+    background-size:160%;
+}
+
+.banner.left {
     background-image: url("content/bugs.jpg");
     background-repeat: no-repeat;
     float:left;
     width: 250px;
-    height: 150px;
+    height: 140px;
+    margin-right: 30px;
+}
+
+.banner.right2 {
+    background-image:url(content/art.jpg);
+    background-repeat: no-repeat;
+    float:right;
+    width: 270px;
+    height: 180px;
 }
 
 .row {
@@ -158,42 +179,62 @@ body {
     clear: both;
 }
 
+.row15 {    
+    display: inline-block;
+}
 
 .row2 iframe {
     margin: auto;
     display:block;
 }
 
-#info {
+.info {
     margin: 10px;
     height: 10%;
     text-align: left;
     background: #B334B3;
     padding: 10px;  
     border-radius: 5px;
-    box-shadow:0 0 4px #000;    
+    box-shadow:0 0 4px #000;
+    display: inline-block; 
 }
 
-#info p {
+.info p {
     font-size: 20px;
     color: #f2f2f2;
 }
 
-#info ul li{
+.info ul li{
     font-size: 20px;
     color: #f2f2f2;        
+}
+
+.info.first {
+    float:left;
+    width:50%;
+}
+
+.info.second {
+    float:right; 
+    width:45%; 
+    height: 240px;
+    padding-top: 0; 
+    padding-bottom: 0;
 }
 
 #error {
     display: none;
     text-align:center;
     font-size: 20px;
+    color: #fff;
 }
 
 #error-div {
     display:none;
     background: red;
     height: 10%;
+    border-radius: 5px;
+    box-shadow:0 0 4px #000;
 }
 
 #unity-game {
@@ -226,16 +267,59 @@ body {
         padding-right: 50px;
     }
 
-    .banner.left {
-        float:none;
-        margin: auto;
-        padding: 30px;
+    .banner:before { 
+        transform:translateY(80%);/*use transform:translateY(100%); to remove footer*/
+        -webkit-transform:translateY(80%);
+        -moz-transform:translateY(80%);
+        -o-transform:translateY(80%);
     }
 
     .banner.right {
         float:none;
         margin: auto;
         padding: 30px;
+        
+    }
+
+    .banner.right:before {
+        font-size: 0.8em;
+    }
+
+    .banner.right:after {
+        font-size: 0.6em;
+    }
+
+    .banner.left {
+        float:none;
+        margin: auto;
+        padding: 30px;
+    }
+
+    .banner.left:after {
+        font-size: 0.6em;
+    }
+
+    .banner.right2 {
+        float:none;
+        margin: auto;
+        padding: 30px;
+    }
+
+    .banner.right2:after {
+        font-size: 0.6em;
+    }
+
+    .info.first  {
+        width: 100%;
+        float:none;
+    }
+    .info.second  {
+        width: 100%;
+        float:none;
+    }
+    
+    .row15 {
+        display: block;
     }
 
     #unity-game {
@@ -272,6 +356,6 @@ body {
     }
 
     .footer p {
-        line-height: 15px;
+        line-height: 20px;
     }
 }
